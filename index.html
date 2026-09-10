@@ -1,256 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SharpHub</title>
+  <title>Sharphub | Social Media Services</title>
 
-<style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:Arial,sans-serif;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-body{
-  background:#eef6ff;
-  color:#172033;
-}
+    body {
+      background: #eef6ff;
+      color: #102a43;
+    }
 
-header{
-  background:#0757c9;
-  color:white;
-  padding:18px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+    header {
+      background: linear-gradient(135deg, #0066ff, #0044bb);
+      color: white;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-.logo{
-  font-size:25px;
-  font-weight:bold;
-}
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:15px;
-}
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
 
-.hero{
-  background:linear-gradient(135deg,#0757c9,#1688ff);
-  color:white;
-  text-align:center;
-  padding:65px 20px;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
 
-.hero h1{
-  font-size:40px;
-  margin-bottom:12px;
-}
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: white;
+    }
 
-.hero p{
-  font-size:17px;
-  margin-bottom:25px;
-}
+    .hero h1 {
+      font-size: 48px;
+      color: #005bea;
+      margin-bottom: 15px;
+    }
 
-.btn{
-  background:white;
-  color:#0757c9;
-  border:0;
-  padding:13px 22px;
-  border-radius:8px;
-  font-weight:bold;
-  cursor:pointer;
-}
+    .hero p {
+      font-size: 18px;
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.6;
+    }
 
-.container{
-  max-width:1000px;
-  margin:30px auto;
-  padding:0 20px;
-}
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 25px;
+      background: #0066ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
-}
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
 
-.card{
-  background:white;
-  padding:25px;
-  border-radius:14px;
-  box-shadow:0 4px 15px rgba(0,70,150,.10);
-  border-top:4px solid #1688ff;
-}
+    .title {
+      text-align: center;
+      color: #005bea;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
 
-.card h2{
-  color:#0757c9;
-  margin-bottom:10px;
-}
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
 
-.balance{
-  font-size:30px;
-  font-weight:bold;
-  color:#0757c9;
-  margin:15px 0;
-}
+    .card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 70, 160, 0.12);
+      text-align: center;
+      transition: 0.3s;
+    }
 
-.section{
-  margin-top:35px;
-}
+    .card:hover {
+      transform: translateY(-7px);
+    }
 
-input,textarea{
-  width:100%;
-  padding:13px;
-  margin:8px 0 15px;
-  border:1px solid #cbdaf0;
-  border-radius:8px;
-}
+    .card h3 {
+      color: #0066ff;
+      margin-bottom: 12px;
+    }
 
-textarea{
-  height:110px;
-}
+    .card p {
+      line-height: 1.5;
+    }
 
-.blue-btn{
-  background:#0757c9;
-  color:white;
-  border:0;
-  padding:13px 20px;
-  border-radius:8px;
-  cursor:pointer;
-}
+    .about {
+      background: #dceeff;
+      border-radius: 20px;
+      text-align: center;
+    }
 
-footer{
-  margin-top:50px;
-  background:#063b89;
-  color:white;
-  text-align:center;
-  padding:30px;
-}
+    .contact {
+      text-align: center;
+      background: white;
+      border-radius: 20px;
+    }
 
-@media(max-width:600px){
-  nav{display:none}
-  .hero h1{font-size:32px}
-}
-</style>
+    footer {
+      background: #062b63;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      nav a {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">SharpHub</div>
+  <header>
+    <nav>
+      <div class="logo">Sharphub</div>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#wallet">Wallet</a>
-    <a href="#referrals">Referrals</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+      <div>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-<section class="hero" id="home">
-  <h1>Welcome to SharpHub</h1>
-  <p>Your digital services and rewards platform.</p>
-  <a href="#wallet">
-    <button class="btn">Get Started</button>
-  </a>
-</section>
+  <main>
 
-<div class="container">
+    <section class="hero" id="home">
+      <h1>Welcome to Sharphub</h1>
 
-<section id="wallet" class="section">
-  <h2>Dashboard</h2><br>
+      <p>
+        Your online hub for professional social-media marketing,
+        promotion and engagement solutions.
+      </p>
 
-  <div class="cards">
+      <a class="button" href="#services">Explore Services</a>
+    </section>
 
-    <div class="card">
-      <h2>Wallet</h2>
-      <div class="balance">₦0.00</div>
-      <button class="blue-btn" onclick="walletMessage()">
-        View Wallet
-      </button>
-    </div>
 
-    <div class="card">
-      <h2>Referrals</h2>
-      <p>Invite eligible users and track your rewards.</p>
-      <br>
-      <button class="blue-btn" onclick="copyReferral()">
-        Copy Referral
-      </button>
-    </div>
+    <section id="services">
+      <h2 class="title">Our Services</h2>
 
-    <div class="card">
-      <h2>Transactions</h2>
-      <p>No transactions yet.</p>
-    </div>
+      <div class="services">
 
-  </div>
-</section>
+        <div class="card">
+          <h3>📈 Social Media Growth</h3>
+          <p>
+            Marketing strategies designed to help improve your
+            online presence.
+          </p>
+        </div>
 
-<section id="referrals" class="section">
-  <div class="card">
-    <h2>Referral Program</h2>
-    <p>Your referral link:</p>
+        <div class="card">
+          <h3>❤️ Engagement</h3>
+          <p>
+            Legitimate engagement campaigns to help creators
+            reach and connect with their audience.
+          </p>
+        </div>
 
-    <input
-      id="referral"
-      value="https://sharphub.github.io/ref/USER123"
-      readonly
-    >
+        <div class="card">
+          <h3>📣 Promotion</h3>
+          <p>
+            Promote your content, brand or project and reach
+            more potential viewers.
+          </p>
+        </div>
 
-    <button class="blue-btn" onclick="copyReferral()">
-      Copy Link
-    </button>
-  </div>
-</section>
+        <div class="card">
+          <h3>🎯 Social Media Marketing</h3>
+          <p>
+            Simple marketing solutions for creators,
+            businesses and online brands.
+          </p>
+        </div>
 
-<section id="contact" class="section">
-  <div class="card">
-    <h2>Suggestions</h2>
-    <p>Send us your suggestions.</p>
+      </div>
+    </section>
 
-    <input type="text" placeholder="Your name">
 
-    <input type="email" placeholder="Your email">
+    <section id="about">
+      <div class="about">
+        <h2 class="title">About Sharphub</h2>
 
-    <textarea placeholder="Write your suggestion..."></textarea>
+        <p>
+          Sharphub provides online marketing and social-media
+          promotion services focused on reliable service,
+          clear communication and customer satisfaction.
+        </p>
+      </div>
+    </section>
 
-    <button class="blue-btn" onclick="sendSuggestion()">
-      Send Suggestion
-    </button>
-  </div>
-</section>
 
-</div>
+    <section id="contact">
+      <div class="contact">
+        <h2 class="title">Contact Us</h2>
 
-<footer>
-  <p>© 2026 SharpHub. All rights reserved.</p>
-</footer>
+        <p>
+          Ready to promote your social-media presence?
+        </p>
 
-<script>
-
-function walletMessage(){
-  alert("Wallet features will be connected to a secure backend.");
-}
-
-function copyReferral(){
-  const link=document.getElementById("referral");
-
-  navigator.clipboard.writeText(link.value);
-
-  alert("Referral link copied!");
-}
-
-function sendSuggestion(){
-  alert("Thanks! Your suggestion has been submitted.");
-}
-
-</script>
-
-</body>
-</html>
-
+        <!-- Replace the number below with your own WhatsApp number -->
+        <a
+          class="button"
+          href="https://wa.me/234   
